@@ -22,7 +22,7 @@ console.log(Object.isSealed(user));
 // * Object.values() ritorna un arrey con tutti i valori delle proprietà di un dato oggetto
 console.log(Object.values(user));
 
-//ESERCIZIO AVANZATO
+//ESERCIZIO AVANZATO:
 
 const items = [
   {
@@ -158,15 +158,31 @@ const items = [
     },
   },
 ];
-
+//sLa soluzione qui sotto fornisce un console.log più simile a quello indicato nella consegna:
 function filter(items) {
-  for (let i = 0; i < items.length; i++) {
-    console.log(items[i]["title"]);
-    console.log(items[i]["price"]);
-    console.log(items[i].rating["count"]);
+  for (i = 0; i <= items.length - 1; i++) {
+    console.log(
+      items[i].title,
+      "\n",
+      items[i].price,
+      "\n",
+      items[i].rating.count
+    );
   }
 }
+
 filter(items);
+
+//Soluzione consegnata:
+//>>
+// function filter(items) {
+//   for (let i = 0; i < items.length; i++) {
+//     console.log(items[i]["title"]);
+//     console.log(items[i]["price"]);
+//     console.log(items[i].rating["count"]);
+//   }
+// }
+// filter(items);
 
 //NOTA: la soluzione sotto permette di avere le 3 info in un singolo log
 
