@@ -39,7 +39,7 @@ function mult(num1, num2) {
 }
 
 function div(num1, num2) {
-  if (num1 === 0 || num2 === 0) {
+  if (num2 === 0) {
     console.warn("Errore: non divisibile per zero :(");
   } else if (typeof num1 === "number" && typeof num2 === "number") {
     console.log(num1 / num2);
@@ -56,7 +56,8 @@ function operations(operatoreFn, num1, num2) {
   }
 }
 
-operations(sum, 1, 3);
-operations(subt, 3, 2);
-operations(mult, 3, 2);
+// operations(sum, 1, 3);
+// operations(subt, 3, 2);
+// operations(mult, 3, 2);
+operations(div, 0, 6);
 operations(div, 3, 0);
