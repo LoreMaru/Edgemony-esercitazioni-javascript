@@ -56,8 +56,8 @@ function operations(operatoreFn, num1, num2) {
   }
 }
 
-// operations(sum, 1, 3);
-// operations(subt, 3, 2);
-// operations(mult, 3, 2);
+operations(sum, 1, 3);
+operations(subt, 3, 2);
+operations(mult, 3, 2);
 operations(div, 0, 6);
 operations(div, 3, 0);
