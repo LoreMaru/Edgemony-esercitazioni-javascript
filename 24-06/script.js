@@ -21,10 +21,12 @@ let counter = 0;
 
 const $CounterDiv = document.createElement("div");
 const $buttonUp = document.createElement("button");
+const $buttonReset = document.createElement("button");
 const $buttonDown = document.createElement("button");
-document.body.append($CounterDiv, $buttonUp, $buttonDown);
+document.body.append($CounterDiv, $buttonUp, $buttonReset, $buttonDown);
 $CounterDiv.innerText = counter;
 $buttonUp.innerText = "CounterUp";
+$buttonReset.innerText = "CounterReset";
 $buttonDown.innerText = "CounterDown";
 
 //style
@@ -42,7 +44,7 @@ const counterUp = () => {
   }
 };
 
-const CounterDown = () => {
+const counterDown = () => {
   if (counter > 0) {
     counter -= 1;
     $CounterDiv.innerText = counter--;
@@ -54,6 +56,15 @@ const CounterDown = () => {
   }
 };
 
+const counterReset = () => {
+  counter = 0;
+  $CounterDiv.innerText = counter;
+  $buttonDown.innerText = "CounterDown";
+  $buttonUp.innerText = "CounterUp";
+};
+
 $buttonUp.addEventListener("click", counterUp);
 
-$buttonDown.addEventListener("click", CounterDown);
+$buttonDown.addEventListener("click", counterDown);
+
+$buttonReset.addEventListener("click", counterReset);
