@@ -49,6 +49,7 @@ const CounterDown = () => {
     $buttonDown.innerText = "CounterDown";
     $buttonUp.innerText = "CounterUp";
   } else if (counter == 0) {
+    $CounterDiv.innerText = counter;
     $buttonDown.innerText = "Niente negativi qui!";
   }
 };
