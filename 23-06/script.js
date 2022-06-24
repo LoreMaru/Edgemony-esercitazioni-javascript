@@ -82,7 +82,7 @@ const numeriEstratti = [42, 23, 1, 7, 12, 99];
 //   const minuti = new Date().getMinutes();
 //   const secondi = new Date().getSeconds();
 //   document.body.innerHTML = `
-// <h1>SONO LE ORE</h1>
+// <h1>SONO LE ORE:</h1>
 // <h1>${ore}.${minuti}.${secondi}</h1>`;
 // }
 // const timeStamp = setInterval(timeIsClone, 1000);
