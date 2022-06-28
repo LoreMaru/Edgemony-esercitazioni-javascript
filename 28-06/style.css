@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainNavbar {
+  top: 0;
+  height: 50px;
+  padding: 15px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.filter {
+  margin: 5px 15px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.mainContent {
+  margin-top: 5px;
+  width: 99vw;
+  height: 80vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productCard img {
+  width: 200px;
+}
+
+.productCard {
+  width: 225px;
+  margin: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mainFooter {
+  position: absolute;
+  bottom: 0;
+  width: 99vw;
+  height: 50px;
+  padding: 15px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
