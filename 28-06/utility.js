@@ -26,7 +26,7 @@ select(".mainNavbar").append(logo, about, user);
 
 //content navbar
 logo.setAttribute("alt", "logo");
-logo.setAttribute("src", "./logoipsum-logo-63.svg");
+logo.setAttribute("src", "./logoipsum.svg");
 about.innerText = "ABOUT";
 const links = document.querySelectorAll("a");
 for (let i = 0; i < links.length; i++) {
@@ -71,7 +71,7 @@ footer.className = "mainFooter";
 // //content footer
 userFooter.innerText = "Ciao " + userName;
 logoFooter.setAttribute("alt", "logo");
-logoFooter.setAttribute("src", "./logoipsum-logo-63.svg");
+logoFooter.setAttribute("src", "./logoipsum.svg");
 
 try {
   if (
