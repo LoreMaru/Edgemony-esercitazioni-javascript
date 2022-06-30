@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Rubik+Moonrocks&display=swap");
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #0b090a;
+}
+
+body h2 {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Raleway Dots", cursive;
+  /* font-family: 'Rubik Moonrocks', cursive; */
+  font-size: 50px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background: #e5383b;
+}
+
+.friends img {
+  width: 35px;
+  padding: 10px;
+  background: #f5f3f4;
+  border-radius: 100%;
+}
+
+.friendCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 150px;
+  padding: 20px 10px;
+  box-shadow: 0 0 8px rgba(22, 26, 29 0.25);
+  font-weight: bold;
+  background: #f5f3f4;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.friendCard:hover {
+  box-shadow: 0 0 28px rgba(22, 26, 29, 0.5);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  background: #d3d3d3;
+}
+
+input,
+button {
+  border: 1px dotted rgba(22, 26, 29, 0.5);
+  padding: 10px;
+}
+
+.add-new-message > * {
+  border-radius: 10px;
+}
+
+.input-text {
+  width: auto;
+  height: 120px;
+}
+
+.input-sender {
+  width: auto;
+  height: 50px;
+}
+
+.add-new-message {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+}
+
+.add-new-message-btn {
+  width: 100px;
+  height: 50px;
+}
+
+.filter-input {
+  margin: 0 20px;
+}
+
+.messageCard {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 10px;
+  /**/
+  line-height: 0px;
+  position: relative;
+  background: #f5f3f4;
+  width: auto;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.messageCard:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #ffffff transparent transparent;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.messages-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* .playlist {
+  width: 25%;
+  background: #b1a7a6;
+} */
+
+.playlist {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* width: 100%; */
+  background: #b1a7a6;
+}
+
+.playlist img {
+  width: 35px;
+  border-radius: 100%;
+}
+
+.playlistCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 10px;
+  margin-left: 50px;
+  box-shadow: 0 0 8px rgba(22, 26, 29 0.25);
+  font-weight: bold;
+  background: #f5f3f4;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.playlistCard:hover {
+  box-shadow: 0 0 28px rgba(22, 26, 29, 0.5);
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .friends {
+    width: 25%;
+  }
+
+  .messages {
+    width: 33%;
+    flex-grow: 1;
+  }
+
+  .playlist {
+    width: 25%;
+  }
+}
