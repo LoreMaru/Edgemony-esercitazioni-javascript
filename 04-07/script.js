@@ -63,10 +63,10 @@ const shop = {
   set products(val) {
     this._products = val;
     this.products.map((item, index, array) => {
-      const p = document.createElement("li");
-      p.textContent =
+      const productCard = document.createElement("li");
+      productCard.textContent =
         this._products[index].name + " - " + this._products[index].price + "€";
-      container.append(p);
+      container.append(productCard);
     });
   },
 };
