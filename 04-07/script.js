@@ -5,7 +5,11 @@
 const obj1 = { foo: "bar", foo2: "bar2" };
 const obj2 = { name: "Mio nome", cognome: "mio cognome" };
 
-console.log({ ...obj1, ...obj2 });
+function merge(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+console.log(merge(obj1, obj2));
 
 // Opzionale Miglioriamo la funzione e aggiungiamo una proprietà di nostra scelta. Il tutto deve essere un one-line
 // const obj1 = {foo: 'bar'};
@@ -16,7 +20,11 @@ console.log({ ...obj1, ...obj2 });
 const obj1b = { foo: "bar", foo2: "bar2" };
 const obj2b = { name: "Mio nome", cognome: "mio cognome" };
 
-console.log({ ...obj1b, ...obj2b, altro: "no" });
+function merge2(obj1, obj2, altraProp) {
+  return { ...obj1, ...obj2, altraProp };
+}
+
+console.log(merge2(obj1, obj2, "value"));
 
 // Destructuring:
 // Usiamo il filter per prendere solo le stringe >= 10 caratteri da un array,
