@@ -169,15 +169,17 @@ const createCard = (parent, imgLink, title, price) => {
 const shop = {
   name: "Edgemonics",
   _products: [],
-  _page: 0,
-  _per_page: 2,
+  _page: 1,
+  _per_page: 3,
   set products(val) {
     this._products = val;
   },
 
   get render() {
+    const indexLastCard = this._page * this._per_page;
+    const indexFirstCard = indexLastCard - this._per_page;
     this._products
-      .slice(this._page, this._per_page)
+      .slice(indexFirstCard, indexLastCard)
       .map((item) =>
         createCard(productContainer, item.image, item.title, item.price)
       );
@@ -190,26 +192,35 @@ const shop = {
 shop._products = itemList;
 shop.render;
 
-btn1.addEventListener("click", () => {
-  shop._products = itemList;
-  shop.clear = "";
-  shop._page = 0;
-  shop._per_page = 2;
-  shop.render;
-});
+// btn1.addEventListener("click", () => {
+//   shop._products = itemList;
+//   shop.clear = "";
+//   shop._page = 0;
+//   shop._per_page = 2;
+//   shop.render;
+// });
 
-btn2.addEventListener("click", () => {
-  shop._products = itemList;
-  shop.clear = "";
-  shop._page = 3;
-  shop._per_page = 5;
-  shop.render;
-});
+// btn2.addEventListener("click", () => {
+//   shop._products = itemList;
+//   shop.clear = "";
+//   shop._page = 3;
+//   shop._per_page = 5;
+//   shop.render;
+// });
 
-btn3.addEventListener("click", () => {
-  shop._products = itemList;
-  shop.clear = "";
-  shop._page = 6;
-  shop._per_page = 8;
-  shop.render;
+// btn3.addEventListener("click", () => {
+//   shop._products = itemList;
+//   shop.clear = "";
+//   shop._page = 6;
+//   shop._per_page = 8;
+//   shop.render;
+// });
+
+pageBtn.forEach((pageBtn) => {
+  pageBtn.addEventListener("click", () => {
+    shop._products = itemList;
+    shop.clear = "";
+    shop._page = pageBtn.getAttribute("id");
+    shop.render;
+  });
 });
