@@ -14,21 +14,21 @@
 // };
 // const fullOptionalPrice = 0; // usiamo Object.values per sommare ed ottenere -> 110
 
-// const product = {
-//   id: 1,
-//   name: "TV",
-//   price: 40,
-//   addons: {
-//     decoder: 10,
-//     qled: 40,
-//     stereo: 20,
-//   },
-// };
-// const optionalPrice = Object.values(product.addons);
-// const productPrice = product.price;
-// const fullPrice = optionalPrice.reduce(
-//   (partialSum, a) => partialSum + a,
-//   productPrice
-// );
+const product = {
+  id: 1,
+  name: "TV",
+  price: 40,
+  addons: {
+    decoder: 10,
+    qled: 40,
+    stereo: 20,
+  },
+};
 
-// console.log(fullPrice);
+const optionaPrices = Object.values(product.addons);
+const fullOptionalPrice = optionaPrices.reduce(
+  (accumulatore, elementoCorrente) => accumulatore + elementoCorrente,
+  product.price
+);
+
+console.log(fullOptionalPrice);
