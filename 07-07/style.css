@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e7eb;
+  text-align: center;
+  font-family: "Chelsea Market", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskInput {
+  margin-top: 50px;
+  padding: 25px;
+  width: 400px;
+  height: 100px;
+  border-radius: 6px;
+  line-height: 1.5;
+  border: 2px solid #dee1e2;
+  color: rgb(14, 14, 16);
+  display: block;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #7c8aff, #3c4fe0);
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+}
+
+li {
+  width: max-content;
+  list-style: none;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.taskList li input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
