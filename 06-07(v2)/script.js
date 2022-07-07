@@ -10,8 +10,6 @@ const newProducts = Array.from(
   }
 ); // Creiamo un array di 12 prodotti
 
-let cardId;
-
 const shop = {
   page: 0,
   perPage: 5,
@@ -44,11 +42,13 @@ const shop = {
     // calcoliamo gli indici di inizio e fine
 
     const productsHTML = this.getProducts()
-      .map((product) => {
+      .map((product, index) => {
         const { name, price, id } = product;
         //
 
-        return `<li class="btnCard" id="${id}">${name} - ${price}€</li>`;
+        return `<li id="${id}">
+        <img src="https://picsum.photos/200?${id}"> <br>
+        ${name} - ${price}€</li>`;
       })
       // --- Questa versione è meno ottimizata e mostra tutti i prodotti della pagina
       // --- nascondendo con il display:none se non sono da visualizzare
@@ -124,12 +124,10 @@ $pagination.addEventListener("click", function (event) {
 
 const productContainer = document.querySelector(".shop");
 
-productContainer.addEventListener("click", (event) => {
-  if (event.target.classList.contains("btnCard")) {
-    console.log();
-    (productAlert = `
-      Prezzo :  ${shop.products[event.target.id].price}
-      Stock : ${shop.products[event.target.id].count}`),
-      alert(productAlert);
-  }
+productContainer.addEventListener("click", function fn(event) {
+  (productAlert = `
+    Prezzo :  ${shop.products[event.target.parentNode.id].price}
+    Stock : ${shop.products[event.target.parentNode.id].count}`),
+    alert(productAlert);
+  console.log(event.target.parentNode.id);
 });
